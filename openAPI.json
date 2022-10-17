@@ -1,0 +1,152 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Web Developer Bookmark",
+        "version": "1",
+        "description": "Ini adalah file bookmark yang akan memudahkan programmer dalam mencari website untuk pengembangan",
+        "contact": {
+            "name": "Muhammad Yuda Yudistira",
+            "email": "yudistira.belajar@gmail.com"
+        }, 
+        "license": {
+            "name": "APACHE 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0"
+        }
+    },
+    "servers": [
+        {
+            "description": "Web developer bookmark server",
+            "url": "web-developer-bookmark.test"
+        }
+    ],
+    "paths": {
+        "/home": {
+            "get": {
+                "summary": "View home page by default",
+                "description": "View home page when first time open website",
+                "responses": {}
+            }
+        },
+        "/home/documentation": {
+            "get": {
+                "summary": "View documentation",
+                "description": "Page for helping you how to use this bookmark in your web browser",
+                "responses": {}
+            }
+        },
+        "/home/about": {
+            "get": {
+                "summary": "View about page",
+                "description": "Page for you know why us created this",
+                "responses": {}
+            }
+        },
+        "/home/contact": {
+            "get": {
+                "summary": "View contact page",
+                "description": "Page for you how to contact us",
+                "responses": {}
+            },
+            "post": {
+                "summary": "Input form contact",
+                "description": "Input your information before you send your message",
+                "responses": {}
+            }
+        },
+        "/home/donate": {
+            "get": {
+                "summary": "Donate page",
+                "description": "View donate page for you give us donated money",
+                "responses": {}
+            },
+            "post": {
+                "summary": "Form transaction",
+                "description": "Input your information and how much you want to donate to us",
+                "responses": {}
+            }
+        },
+        "/user/bookmark/{bookmarkId}/download": {
+            "get": {
+                "summary": "Download bookmark file",
+                "description": "Click download button on bookmark you had choice",
+                "responses": {}
+            }
+        },
+        "/user/{userId}": {
+            "get": {
+                "summary": "Dashboard Page",
+                "description": "View your dashboard for managing your bookmark",
+                "responses": {}
+            }
+        },
+        "/user/{userId}/bookmark": {
+            "get": {
+                "summary": "Get all bookmark",
+                "description": "Get all of your bookmark in database",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": false,
+                        "description": "Search your bookmark by name"
+                    }
+                ],
+                "responses": {}
+            },
+            "post": {
+                "summary": "Create your bookmark",
+                "description": "View form for create new your bookmark",
+                "responses": {}
+            }
+        },
+        "/user/{userId}/bookmark/{bookmarkId}": {
+            "put": {
+                "summary": "Edit your bookmark",
+                "description": "View form for edit new your bookmark",
+                "responses": {}
+            },
+            "delete": {
+                "summary": "Delete your bookmark",
+                "description": "Click delete button if you want to delete one in your bookmark",
+                "responses": {}
+            }
+        },
+        "/user/{userId}/allUser": {
+            "get": {
+                "summary": "All User Page",
+                "description": "Page for admin manage role all user",
+                "responses": {}
+            }
+        },
+        "/user/{userId}/allUser/{userId}": {
+            "put": {
+                "summary": "Select Button Roles",
+                "description": "Admin can change role of all user",
+                "responses": {}
+            }
+        },
+        "/register": {
+            "get": {
+                "summary": "Registration Page",
+                "description": "Page for guest fill self data",
+                "responses": {}
+            },
+            "post": {
+                "summary": "Registration Form",
+                "description": "Form can filled by guest for register"
+            }
+        },
+        "/login": {
+            "get": {
+                "summary": "Login Page",
+                "description": "Page for guest enter in website as user",
+                "responses": {}
+            },
+            "post": {
+                "summary": "Form Login",
+                "description": "Form can filled by guest for access user's dashboard",
+                "responses": {}
+            }
+        }
+    }
+}
